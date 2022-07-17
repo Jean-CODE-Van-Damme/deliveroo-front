@@ -1,38 +1,154 @@
-.App {
-  text-align: center;
+body {
+  background-color: #f3f5f5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 1200px;
+  margin: 0 auto;
+
+  /* border: 2px red solid; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  width: 100%;
+  height: 50px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  /* padding: 20px; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.aside {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 300px;
+  /* border: 2px red solid; */
+  display: flex;
+  background-color: white;
+}
+
+.aside-left {
+  width: 60%;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  /* border: 2px blue solid; */
+  padding: 4%;
+}
+
+.aside-left p {
+  color: #949898;
+  line-height: 30px;
+}
+
+h2 {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.aside-right {
+  width: 40%;
+}
+
+.aside img {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  /* border: 2px red solid; */
+  /* background-color: gold; */
+  width: 70%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.big-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* border: 2px yellow solid; */
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 47%;
+  height: 150px;
+  /* border: 2px blue solid; */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.left-card {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1rem;
+}
+
+.left-card-bis {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1rem;
+}
+
+.left-card p {
+  color: #a1a4a4;
+}
+
+.left-card-text {
+  overflow-y: scroll;
+}
+
+.left-card-price {
+  margin-top: 10px;
+  width: 60%;
+  height: 30%;
+  display: flex;
+  /* border: 2px green solid; */
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.img-card {
+  /* border: 2px black solid; */
+  width: 30%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.populaire {
+  color: #fd9429;
+}
+
+.price {
+  color: #989c9c;
 }
