@@ -1,4 +1,4 @@
-const Section = ({ title, mealsArray = [] }) => {
+const Section = ({ title = "", mealsArray = [] }) => {
   return (
     <section>
       <h3>{title}</h3>
@@ -6,6 +6,8 @@ const Section = ({ title, mealsArray = [] }) => {
       <div className="big-div">
         {mealsArray.map((element, index) => {
           return (
+            // si meals est different de undifined ( ou si meals est different d un tableau vide) && retourne la div card)
+
             <div className="card" key={element.id}>
               <div className={element.picture ? "left-card" : "left-card-bis"}>
                 <h4>{element.title}</h4>

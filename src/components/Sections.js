@@ -6,11 +6,13 @@ const Sections = ({ categoryArray = [] }) => {
       <div className="container">
         {categoryArray.map((element, index) => {
           return (
-            <Section
-              key={index}
-              title={element.name}
-              mealsArray={element.meals}
-            />
+            element.meals.length > 0 && (
+              <Section
+                key={index}
+                title={element.name}
+                mealsArray={element.meals}
+              />
+            )
           );
         })}
       </div>
