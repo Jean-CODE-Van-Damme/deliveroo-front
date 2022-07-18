@@ -5,6 +5,7 @@ const Section = ({ title = "", mealsArray = [] }) => {
 
       <div className="big-div">
         {/* on map sur mealsarray */}
+        {/* et on retourne les elements souhaites sous condition  */}
         {mealsArray.map((element, index) => {
           return (
             <div className="card" key={element.id}>

@@ -43,7 +43,7 @@ function App() {
             text={data.restaurant.description}
             picture={data.restaurant.picture}
           />
-
+          {/* on passe le tableau categories en props */}
           <Sections categoryArray={data.categories} />
         </div>
       )}
