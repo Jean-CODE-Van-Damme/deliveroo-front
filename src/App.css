@@ -7,7 +7,7 @@ body {
   width: 1200px;
   margin: 0 auto;
 
-  /* border: 2px red solid; */
+  border: 2px red solid;
 }
 
 header {
@@ -19,6 +19,8 @@ header {
   align-items: center;
   background-color: white;
   /* padding: 20px; */
+  color: #25cdbe;
+  font-size: 1.6rem;
 }
 
 .aside {
@@ -120,6 +122,10 @@ section h3 {
 
 .left-card-text {
   overflow-y: scroll;
+}
+
+.left-card-text::-webkit-scrollbar {
+  display: none;
 }
 
 .left-card-price {
