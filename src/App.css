@@ -7,7 +7,7 @@ body {
   width: 1200px;
   margin: 0 auto;
 
-  border: 2px red solid;
+  /* border: 2px red solid; */
 }
 
 header {
@@ -159,3 +159,57 @@ section h3 {
 .price {
   color: #989c9c;
 }
+/* 
+@media (max-width: 768px) {
+  .big-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px yellow solid;
+    flex-wrap: wrap;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  .aside {
+    width: 100%;
+    margin: auto 0;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    border: 2px red solid;
+  }
+
+  .aside-left {
+    margin: 0 auto;
+    width: 100%;
+
+    padding: 4%;
+    border: 2px green solid;
+  }
+  .aside-right {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+    border: 2px blue solid;
+  }
+
+  .aside-right img {
+    object-fit: contain;
+    object-fit: cover;
+  }
+
+  .aside-left p {
+    color: #949898;
+    line-height: 30px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+} */
