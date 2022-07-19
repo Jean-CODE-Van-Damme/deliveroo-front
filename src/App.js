@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Sections from "./components/Sections";
 import Aside from "./components/Aside";
+import logo from "./assets/logo.png";
 
 function App() {
   // console.log(1);
@@ -37,7 +38,7 @@ function App() {
         <p>Chargement</p>
       ) : (
         <div>
-          <Header name="deliveroo" />
+          <Header name={logo} />
           <Aside
             title={data.restaurant.name}
             text={data.restaurant.description}

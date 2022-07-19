@@ -2,7 +2,7 @@ const Header = ({ name }) => {
   return (
     <header>
       <div className="container">
-        <span>{name}</span>
+        <img src={name} alt="" />
       </div>
     </header>
   );
