@@ -175,6 +175,22 @@ section h3 {
 .price {
   color: #989c9c;
 }
+
+.main {
+  display: flex;
+}
+
+.panier {
+  height: 300px;
+  background-color: white;
+  flex-shrink: 0;
+  /* border: 2px blue solid; */
+}
+
+.big-choice {
+  border: 3px black solid;
+}
+
 /* 
 @media (max-width: 768px) {
   .big-div {

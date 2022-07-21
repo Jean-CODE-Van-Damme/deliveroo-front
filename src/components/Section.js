@@ -1,4 +1,11 @@
-const Section = ({ title = "", mealsArray = [] }) => {
+const Section = ({
+  title = "",
+  mealsArray = [],
+  basketArray = [],
+  setBasketArray,
+  numberMeal,
+  setNumberMeal,
+}) => {
   return (
     <section>
       <h3>{title}</h3>
@@ -8,7 +15,26 @@ const Section = ({ title = "", mealsArray = [] }) => {
         {/* et on retourne les elements souhaites sous condition  */}
         {mealsArray.map((element, index) => {
           return (
-            <div className="card" key={element.id}>
+            <div
+              className="card"
+              key={element.id}
+              onClick={() => {
+                const copyArray = [...basketArray];
+                const obj = {
+                  id: element.id,
+                  name: element.title,
+                  price: element.price,
+                  quantity: numberMeal,
+                };
+
+                // {
+                //   copyArray.indexOf(element.id) === -1 && copyArray.push(obj);
+                // }
+                copyArray.push(obj);
+
+                setBasketArray(copyArray);
+              }}
+            >
               <div className={element.picture ? "left-card" : "left-card-bis"}>
                 <h4>{element.title}</h4>
                 <div className="left-card-text">

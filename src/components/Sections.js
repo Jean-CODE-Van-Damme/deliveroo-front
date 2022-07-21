@@ -1,6 +1,12 @@
 import Section from "./Section";
 
-const Sections = ({ categoryArray = [] }) => {
+const Sections = ({
+  categoryArray = [],
+  basketArray = [],
+  setBasketArray,
+  numberMeal,
+  setNumberMeal,
+}) => {
   return (
     <div>
       <div className="container">
@@ -13,6 +19,10 @@ const Sections = ({ categoryArray = [] }) => {
                 title={element.name}
                 // on passe le tab meals array en props
                 mealsArray={element.meals}
+                basketArray={basketArray}
+                setBasketArray={setBasketArray}
+                numberMeal={numberMeal}
+                setNumberMeal={setNumberMeal}
               />
             )
           );

@@ -5,11 +5,14 @@ import Header from "./components/Header";
 import Sections from "./components/Sections";
 import Aside from "./components/Aside";
 import logo from "./assets/logo.png";
+import Panier from "./components/Panier";
 
 function App() {
   // console.log(1);
   const [data, setData] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [basketArray, setBasketArray] = useState([]);
+  const [numberMeal, setNumberMeal] = useState(0);
 
   const fetchData = async () => {
     try {
@@ -45,7 +48,21 @@ function App() {
             picture={data.restaurant.picture}
           />
           {/* on passe le tableau categories en props */}
-          <Sections categoryArray={data.categories} />
+
+          <Sections
+            categoryArray={data.categories}
+            basketArray={basketArray}
+            setBasketArray={setBasketArray}
+            numberMeal={numberMeal}
+            setNumberMeal={setNumberMeal}
+          />
+
+          <Panier
+            basketArray={basketArray}
+            setBasketArray={setBasketArray}
+            numberMeal={numberMeal}
+            setNumberMeal={setNumberMeal}
+          />
         </div>
       )}
     </div>
