@@ -6,6 +6,7 @@ const Panier = ({ basketArray = [], setBasketArray }) => {
     console.log("sous-total", underTotal);
   }
   let total = underTotal + taxes;
+  let arounTtotal = total.toFixed(2);
 
   return (
     <div className="container">
@@ -71,7 +72,7 @@ const Panier = ({ basketArray = [], setBasketArray }) => {
         </div>
         <div>
           <span>Total</span>
-          <span>{total}</span>
+          <span>{arounTtotal}</span>
         </div>
       </div>
     </div>
