@@ -3,8 +3,6 @@ const Section = ({
   mealsArray = [],
   basketArray = [],
   setBasketArray,
-  numberMeal,
-  setNumberMeal,
 }) => {
   return (
     <section>
@@ -24,11 +22,12 @@ const Section = ({
                   id: element.id,
                   name: element.title,
                   price: element.price,
-                  quantity: numberMeal,
+                  quantity: 1,
                 };
 
                 // {
-                //   copyArray.indexOf(element.id) === -1 && copyArray.push(obj);
+                //   copyArray.find((element) =>  ) === undefined &&
+                //     copyArray.push(obj);
                 // }
                 copyArray.push(obj);
 

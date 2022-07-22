@@ -12,7 +12,6 @@ function App() {
   const [data, setData] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [basketArray, setBasketArray] = useState([]);
-  const [numberMeal, setNumberMeal] = useState(0);
 
   const fetchData = async () => {
     try {
@@ -53,16 +52,9 @@ function App() {
             categoryArray={data.categories}
             basketArray={basketArray}
             setBasketArray={setBasketArray}
-            numberMeal={numberMeal}
-            setNumberMeal={setNumberMeal}
           />
 
-          <Panier
-            basketArray={basketArray}
-            setBasketArray={setBasketArray}
-            numberMeal={numberMeal}
-            setNumberMeal={setNumberMeal}
-          />
+          <Panier basketArray={basketArray} setBasketArray={setBasketArray} />
         </div>
       )}
     </div>

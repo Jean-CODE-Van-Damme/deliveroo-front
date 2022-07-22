@@ -1,12 +1,6 @@
 import Section from "./Section";
 
-const Sections = ({
-  categoryArray = [],
-  basketArray = [],
-  setBasketArray,
-  numberMeal,
-  setNumberMeal,
-}) => {
+const Sections = ({ categoryArray = [], basketArray = [], setBasketArray }) => {
   return (
     <div>
       <div className="container">
@@ -21,8 +15,6 @@ const Sections = ({
                 mealsArray={element.meals}
                 basketArray={basketArray}
                 setBasketArray={setBasketArray}
-                numberMeal={numberMeal}
-                setNumberMeal={setNumberMeal}
               />
             )
           );
