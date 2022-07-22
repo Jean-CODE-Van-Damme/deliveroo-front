@@ -6,6 +6,7 @@ const Panier = ({ basketArray = [], setBasketArray }) => {
     console.log("sous-total", underTotal);
   }
   let total = underTotal + taxes;
+  let aroundUnderTotal = underTotal.toFixed(2);
   let arounTtotal = total.toFixed(2);
 
   return (
@@ -63,7 +64,7 @@ const Panier = ({ basketArray = [], setBasketArray }) => {
         })}
         <div>
           <span>Sous-total</span>
-          <span>{underTotal}</span>
+          <span>{aroundUnderTotal}</span>
         </div>
 
         <div>
