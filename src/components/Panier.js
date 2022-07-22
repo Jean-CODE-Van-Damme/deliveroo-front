@@ -71,17 +71,17 @@ const Panier = ({ basketArray = [], setBasketArray }) => {
         <div className="sous-total-ans-fees">
           <div className="sous-total">
             <span>Sous-total</span>
-            <span>{aroundUnderTotal}</span>
+            <span>{aroundUnderTotal} $</span>
           </div>
           <div className="fees">
-            <span>frais de livraison</span>
-            <span>{taxes}</span>
+            <span>frais de livraison </span>
+            <span>{taxes} $</span>
           </div>
         </div>
 
         <div className="total">
           <span>Total</span>
-          <span>{arounTtotal}</span>
+          <span>{arounTtotal} $</span>
         </div>
       </div>
     </div>
