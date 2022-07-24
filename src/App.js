@@ -48,13 +48,21 @@ function App() {
           />
           {/* on passe le tableau categories en props */}
 
-          <Sections
-            categoryArray={data.categories}
-            basketArray={basketArray}
-            setBasketArray={setBasketArray}
-          />
-
-          <Panier basketArray={basketArray} setBasketArray={setBasketArray} />
+          <main className="container">
+            <div className="section-group-left">
+              <Sections
+                categoryArray={data.categories}
+                basketArray={basketArray}
+                setBasketArray={setBasketArray}
+              />
+            </div>
+            <div className="section-panier-rigth">
+              <Panier
+                basketArray={basketArray}
+                setBasketArray={setBasketArray}
+              />
+            </div>
+          </main>
         </div>
       )}
     </div>
