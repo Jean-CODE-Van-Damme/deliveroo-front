@@ -25,11 +25,16 @@ const Section = ({
                   quantity: 1,
                 };
 
-                // {
-                //   copyArray.find((element) =>  ) === undefined &&
-                //     copyArray.push(obj);
-                // }
-                copyArray.push(obj);
+                let isHere = false;
+                for (let i = 0; i < copyArray.length; i++) {
+                  if (obj.id === copyArray[i].id) {
+                    isHere = true;
+                  }
+                }
+                {
+                  isHere === false && copyArray.push(obj);
+                }
+                // copyArray.push(obj);
 
                 setBasketArray(copyArray);
               }}

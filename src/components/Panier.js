@@ -36,6 +36,17 @@ const Panier = ({ basketArray = [], setBasketArray }) => {
                       copyBasketArray[index].quantity =
                         copyBasketArray[index].quantity - 1;
                       setBasketArray(copyBasketArray);
+
+                      {
+                        element.quantity < 1 &&
+                          copyBasketArray.splice(index, 1);
+                      }
+                      setBasketArray(copyBasketArray);
+
+                      // if (element.quantity < 1) {
+                      //   copyBasketArray.splice(index, 1);
+                      //   setBasketArray(copyBasketArray);
+                      // }
                     }}
                   >
                     -
