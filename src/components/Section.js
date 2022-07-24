@@ -38,11 +38,11 @@ const Section = ({
 
                 setBasketArray(copyArray);
 
-                const copyBasketArray = [...basketArray];
-                for (let i = 0; i, copyBasketArray.length; i++) {
-                  copyBasketArray[i].quantity = copyBasketArray[i].quantity + 1;
-                  setBasketArray(copyBasketArray);
-                }
+                // const copyBasketArray = [...basketArray];
+                // for (let i = 0; i, copyBasketArray.length; i++) {
+                //   copyBasketArray[i].quantity = copyBasketArray[i].quantity + 1;
+                //   setBasketArray(copyBasketArray);
+                // }
               }}
             >
               <div className={element.picture ? "left-card" : "left-card-bis"}>
