@@ -8,9 +8,12 @@ import logo from "./assets/logo.png";
 import Panier from "./components/Panier";
 
 function App() {
-  // console.log(1);
+  // states
+  // recup data
   const [data, setData] = useState("");
+  // eviter de boucler au mmt de la recup data
   const [isLoading, setIsLoading] = useState(true);
+  // state pour le panier
   const [basketArray, setBasketArray] = useState([]);
 
   const fetchData = async () => {

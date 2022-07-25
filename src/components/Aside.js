@@ -1,4 +1,4 @@
-const Aside = ({ title, text, picture }) => {
+const Aside = ({ title = "", text = "", picture }) => {
   return (
     <>
       <div className="container">
