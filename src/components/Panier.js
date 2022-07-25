@@ -1,4 +1,5 @@
 const Panier = ({ basketArray = [], setBasketArray }) => {
+  // calcul du total, taxes, sous total, et des arrondis,
   let taxes = 2.5;
   let underTotal = 0;
   for (let i = 0; i < basketArray.length; i++) {
@@ -12,8 +13,13 @@ const Panier = ({ basketArray = [], setBasketArray }) => {
   return (
     <div className="container">
       <div className="panier">
-        <h5>Valider mon panier</h5>
-
+        {basketArray.length === 0}
+        <button
+          className={basketArray.length === 0 ? "pas-valider" : "valider"}
+        >
+          Valider mon panier
+        </button>
+        {/* on map sur le basketArray qui est notre state tableau  */}
         {basketArray.map((element, index) => {
           console.log(
             "la clef quantity dans basket array pour chaque element",
@@ -21,6 +27,8 @@ const Panier = ({ basketArray = [], setBasketArray }) => {
           );
           console.log(basketArray);
           console.log(basketArray[index].quantity);
+
+          // {element.quantity > 0 ? }
 
           return (
             //  je sais pas pourquoi mais ca marche
@@ -42,6 +50,8 @@ const Panier = ({ basketArray = [], setBasketArray }) => {
                       //   copyBasketArray[index].price;
                       // setBasketArray(copyBasketArray);
 
+                      // si la quantite de l element que l on map (basketArray)
+                      // est inf a 1 alors on supp l element a cet index.
                       {
                         element.quantity < 1 &&
                           copyBasketArray.splice(index, 1);
@@ -73,12 +83,13 @@ const Panier = ({ basketArray = [], setBasketArray }) => {
               <div className="right-part">
                 <span>{element.name}</span>
                 <span className="price">
-                  {element.price} <p>$</p>
+                  {(element.price * element.quantity).toFixed(2)} <p>$</p>
                 </span>
               </div>
             </div>
           );
         })}
+
         <div className="sous-total-ans-fees">
           <div className="sous-total">
             <span>Sous-total</span>

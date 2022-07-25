@@ -30,8 +30,10 @@ const Section = ({
                 for (let i = 0; i < copyArray.length; i++) {
                   if (obj.id === copyArray[i].id) {
                     isHere = true;
+                    copyArray[i].quantity = copyArray[i].quantity + 1;
                   }
                 }
+
                 {
                   isHere === false && copyArray.push(obj);
                 }
