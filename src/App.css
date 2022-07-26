@@ -437,6 +437,9 @@ main {
     /* border: 2px blue solid; */
     padding: 10px;
     margin-right: 0px;
+    /* top: unset; */
+    position: fixed;
+    bottom: 10px;
   }
 
   main {
@@ -444,15 +447,15 @@ main {
   }
 
   .section-panier-right {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     /* border: 2px red solid; */
 
-    position: sticky;
-    top: 30px;
-    /* max-width: 360px; */
-    height: 100%;
+    /* height: 100%; */
     margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
   }
 
   .section-group-left {
