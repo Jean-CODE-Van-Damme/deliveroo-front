@@ -13,10 +13,7 @@ const Panier = ({ basketArray = [], setBasketArray }) => {
   return (
     <div className="container">
       <div className="panier">
-        {basketArray.length === 0}
-        <button
-          className={basketArray.length === 0 ? "pas-valider" : "valider"}
-        >
+        <button className={basketArray.length === 0 ? "not-valid" : "valid"}>
           Valider mon panier
         </button>
         {/* on map sur le basketArray qui est notre state tableau  */}
@@ -90,21 +87,26 @@ const Panier = ({ basketArray = [], setBasketArray }) => {
           );
         })}
 
-        <div className="sous-total-ans-fees">
-          <div className="sous-total">
-            <span>Sous-total</span>
-            <span>{aroundUnderTotal} $</span>
-          </div>
-          <div className="fees">
-            <span>frais de livraison </span>
-            <span>{taxes} $</span>
-          </div>
-        </div>
-
-        <div className="total">
-          <span>Total</span>
-          <span>{arounTtotal} $</span>
-        </div>
+        {basketArray.length > 0 ? (
+          <>
+            <div className="sous-total-ans-fees">
+              <div className="sous-total">
+                <span>Sous-total</span>
+                <span>{aroundUnderTotal} $</span>
+              </div>
+              <div className="fees">
+                <span>frais de livraison </span>
+                <span>{taxes} $</span>
+              </div>
+            </div>
+            <div className="total">
+              <span>Total</span>
+              <span>{arounTtotal} $</span>
+            </div>
+          </>
+        ) : (
+          <p className="empty">Votre Panier est vide</p>
+        )}
       </div>
     </div>
   );

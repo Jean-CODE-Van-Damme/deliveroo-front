@@ -59,7 +59,7 @@ function App() {
                 setBasketArray={setBasketArray}
               />
             </div>
-            <div className="section-panier-rigth">
+            <div className="section-panier-right">
               <Panier
                 basketArray={basketArray}
                 setBasketArray={setBasketArray}
