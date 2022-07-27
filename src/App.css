@@ -460,4 +460,21 @@ main {
   .section-group-left {
     width: 100%;
   }
+
+  .img-card {
+    width: 35%;
+  }
+
+  .card img {
+    margin-left: 10px;
+    width: 100%;
+  }
+
+  .left-card {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1rem;
+  }
 }
