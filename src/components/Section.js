@@ -34,9 +34,7 @@ const Section = ({
                   }
                 }
 
-                {
-                  isHere === false && copyArray.push(obj);
-                }
+                isHere === false && copyArray.push(obj);
 
                 setBasketArray(copyArray);
 
