@@ -40,7 +40,8 @@ const Panier = ({ basketArray = [], setBasketArray }) => {
                       const copyBasketArray = [...basketArray];
                       copyBasketArray[index].quantity =
                         copyBasketArray[index].quantity - 1;
-                      setBasketArray(copyBasketArray);
+
+                      element.quantity < 1 && copyBasketArray.splice(index, 1);
 
                       // copyBasketArray[index].price =
                       //   copyBasketArray[index].quantity *
@@ -49,10 +50,7 @@ const Panier = ({ basketArray = [], setBasketArray }) => {
 
                       // si la quantite de l element que l on map (basketArray)
                       // est inf a 1 alors on supp l element a cet index.
-                      {
-                        element.quantity < 1 &&
-                          copyBasketArray.splice(index, 1);
-                      }
+
                       setBasketArray(copyBasketArray);
                     }}
                   >
