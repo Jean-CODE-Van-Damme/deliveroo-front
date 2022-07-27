@@ -57,7 +57,7 @@ const Section = ({
 
                 <div className="left-card-price">
                   {/* on retourne le prix  */}
-                  <span className="price"> {element.price}</span>
+                  <span className="price"> {element.price} $</span>
                   {/* si la clef popular est true on retourne l etoile et "populaire" */}
                   {element.popular && (
                     <span className="populaire"> ★ Populaire </span>
