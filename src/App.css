@@ -461,6 +461,16 @@ main {
     width: 100%;
   }
 
+  .card {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+  }
   .img-card {
     width: 35%;
   }
@@ -476,5 +486,9 @@ main {
     flex-direction: column;
     justify-content: space-around;
     font-size: 1rem;
+  }
+
+  .left-card-price {
+    width: 70%;
   }
 }
